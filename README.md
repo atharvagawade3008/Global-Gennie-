@@ -1,76 +1,32 @@
-# Global Gennie 🌍
+# React + TypeScript + Vite
 
-A modern web platform designed to provide a digital experience focused on global assistance, accessibility, and user-focused services.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## ✨ Overview
+Currently, two official plugins are available:
 
-Global Gennie is a web project designed to explore how digital technology can simplify access to useful information and services for users across different locations.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-The project focuses on creating a clean, responsive, and accessible interface with an emphasis on usability and modern web design.
+## React Compiler
 
-## 🚀 Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-* Modern responsive interface
-* User-focused navigation
-* Clean and accessible UI
-* Responsive layouts
-* Interactive interface elements
-* Mobile-friendly experience
-* Clear information hierarchy
+## Expanding the Oxlint configuration
 
-## 🛠️ Tech Stack
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-* HTML5
-* CSS3
-* JavaScript
-* Responsive Web Design
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-## 📸 Preview
-
-*Add screenshots or a short demo GIF here.*
-
-## 🌐 Live Demo
-
-[View Live Website](https://globalgennie.netlify.app/)
-
-## 💡 Project Focus
-
-The project explores how a modern web interface can organize information and services in a simple and accessible way.
-
-The design prioritizes:
-
-* Usability
-* Accessibility
-* Responsive design
-* Clear navigation
-* Modern visual presentation
-* User-focused interactions
-
-## 🎯 What I Learned
-
-Through this project, I explored:
-
-* Designing user-focused web experiences
-* Building responsive interfaces
-* Organizing information effectively
-* Creating intuitive navigation
-* Improving visual hierarchy
-* Structuring a deployable web application
-
-## 🔮 Future Improvements
-
-* Expand core functionality
-* Add backend integration
-* Add user accounts
-* Add database support
-* Improve personalization
-* Add analytics
-* Expand platform features based on user requirements
-
-## 👨‍💻 Author
-
-**Atharva Gawade**
-
-* GitHub: https://github.com/atharvagawade3008
-* Portfolio: https://atharvagawade.netlify.app/
-* LinkedIn: https://www.linkedin.com/in/atharva-gawade-126984289/
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
